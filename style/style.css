@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(/fonts/Inter-Regular.ttf);
+}
 :root {
   --main-white-color: #F7F2FF; /*основной "белый" цвет, используется почти во всех текстах*/
   --article-text-color: #6E5E83; /* цвет для абзацев статей, описаний услуг и мелких подзаголовков*/
