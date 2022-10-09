@@ -14,7 +14,7 @@
   /* цвет для абзацев статей, описаний услуг и мелких подзаголовков*/
 }
 
-@font-face {
+/*@font-face {
   font-family: 'Inter';
   font-weight: 600;
   src: local('Inter'),
@@ -23,10 +23,10 @@
       url('/fonts/Inter/Inter-SemiBold.ttf') format('ttf'),
       url('/fonts/Inter/Inter-SemiBold.eot') format('eot');
 }
-
+*/
 @font-face {
   font-family: 'Inter';
-  font-weight: 500;
+  /*font-weight: 500;*/
   src: local('Inter'),
     url('/fonts/Inter/Inter-Medium.woff2') format('woff2'),
     url('/fonts/Inter/Inter-Medium.woff') format('woff'),
@@ -34,7 +34,7 @@
     url('/fonts/Inter/Inter-Medium.eot') format('eot');
 }
 
-@font-face {
+/*@font-face {
   font-family: 'Inter';
   font-weight: 400;
   src: local('Inter'),
@@ -43,10 +43,10 @@
     url('/fonts/Inter/Inter-LightBETA.ttf') format('ttf'),
     url('/fonts/Inter/Inter-LightBETA.eot') format('eot');
 }
-
+*/
 @font-face {
   font-family: 'Open Sans';
-  font-weight: 500;
+  /*font-weight: 500;*/
   src: local('Open Sans'),
     url('/fonts/Open_Sans/OpenSans-Regular.woff2') format('woff2'),
     url('/fonts/Open_Sans/OpenSans-Regular.woff') format('woff'),
@@ -54,7 +54,7 @@
     url('/fonts/Open_Sans/OpenSans-Regular.eot') format('eot');
 }
 
-@font-face {
+/*@font-face {
   font-family: 'Open Sans';
   font-weight: 400;
   src: local('Open Sans'),
@@ -63,15 +63,15 @@
     url('/fonts/Open_Sans/OpenSans-Light.ttf') format('ttf'),
     url('/fonts/Open_Sans/OpenSans-Light.eot') format('eot');
 }
-
+*/
 body {
   position: relative;
   height: 100%;
-  /*line-height: 1;*/
-  font-family: "Inter", sans-serif;
+  /*line-height: 1;
+  /*font-family: "Inter", sans-serif;
   font-family: "Open Sans", sans-serif;
-  /*font-family: "Poppins", sans-serif;*/
-  /* background: #c4c4c4; */
+  font-family: "Poppins", sans-serif;
+  background: #c4c4c4; */
   background: #1a0930;
   z-index: 3;
 }
@@ -156,6 +156,7 @@ body {
 }
 
 ._container {
+  width:90vw;
   margin: 0 auto;
   max-width: 1138px;
   /* padding: 0 15px; */
@@ -574,8 +575,7 @@ body {
 }
 .services-block__text {
   padding: 50px 0 55px 34px;
-  font-family: Inter;
-  font-family: Medium;
+  font-family: 'Inter';
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
@@ -874,12 +874,10 @@ body {
 }
 .articles__title_h3 {
   font-family: 'Inter';
-  font-style: normal;
+  /*font-style: normal;*/
   font-weight: 600;
   font-size: 16px;
   line-height: 135%;
-  /* identical to box height, or 22px */
-
   color: #1a0930;
   padding: 20px 0 5px 23px;
 }
@@ -985,6 +983,10 @@ body {
 
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------category-list----------------------------------*/
+.services-block__grid .services-block__item .services-block__text{
+  padding: 41px 0px 42px 34px
+}
+
 .services-block__grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -996,6 +998,7 @@ body {
 }
 
 .category-list_description {
+  font-family: 'Inter';
   font-weight: 400;
   font-size: 16px;
   color: var(--article-text-color);
@@ -1075,7 +1078,7 @@ body {
   border-radius: 5px
 }
 
-.btn {
+.btn a{
   font-family: 'Open Sans';
     /*font-family: "Poppins";*/
 }
@@ -1091,6 +1094,7 @@ body {
 }
 
 .blog-article_text {
+  font-family: 'Inter';
   color: var(--article-text-color);
   font-weight: 400;
   font-size: 16px;
