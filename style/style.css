@@ -131,7 +131,7 @@ body {
   width: 449.03px;
   height: 367.72px;
   /* left: 244px; */
-  top: 3180.7px;
+  top: 3480.7px;
 
   background: radial-gradient(
       50.09% 124.66% at 65.27% 55.89%,
@@ -142,6 +142,27 @@ body {
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   filter: blur(100px);
   transform: rotate(-36.12deg);
+}
+.background-reviews__Star1 {
+  position: absolute;
+  z-index: 20;
+}
+.background-reviews__Star2 {
+  position: absolute;
+  z-index: 20;
+}
+.background-reviews__Star3 {
+  position: absolute;
+  z-index: 20;
+}
+.background-choice__left {
+  position: absolute;
+  width: 238.24px;
+  height: 429.21px;
+  left: 52.26px;
+  top: 6828.99px;
+}
+.background-choice__right {
 }
 .wrapper {
   min-height: 100%;
