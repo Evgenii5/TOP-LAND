@@ -160,7 +160,9 @@ body {
   width: 238.24px;
   height: 429.21px;
   left: 52.26px;
-  top: 6828.99px;
+  top: 3909.99px;
+}
+.background-choice__leftImg {
 }
 .background-choice__right {
 }
@@ -964,28 +966,63 @@ body {
   gap: 13px;
   /* align-items: center; */
 }
-.question__item {
+/* .question__item {
   display: flex;
   justify-content: space-between;
   border: 1px solid #6e5e83;
   border-radius: 3px;
-}
-.question__text {
+} */
+/* .question__text {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  /* identical to box height, or 117% */
-  color: var(--main-white-color);
-  /*color: #f7f2ff;*/
+  identical to box height, or 117% 
+  color: var(--main-white-color); 
+  color: #f7f2ff;
   padding: 20px 0 20px 23px;
-}
-.question__img {
-}
-.question__img_hover {
+} */
+/* .question__img {
+} */
+/* .question__img_hover {
   padding-top: 23px;
   padding-right: 39px;
+} */
+.collapsible {
+  background-color: transparent;
+  color: rgb(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #fff;
+  text-align: none;
+  outline: none;
+  font-size: 20px;
+}
+.active,
+.collapsible:hover {
+  background-color: transparent;
+  color: rgb(255, 255, 255, 1);
+}
+.collapsible:after {
+  content: "\002B";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2212";
+  color: rgb(255, 255, 255, 1);
+}
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #ffffff;
 }
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------page-header------------------------------------*/
