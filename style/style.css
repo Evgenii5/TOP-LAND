@@ -48,10 +48,10 @@
   font-family: 'Open Sans';
   /*font-weight: 500;*/
   src: local('Open Sans'),
-    url('/fonts/Open_Sans/OpenSans-Regular.woff2') format('woff2'),
-    url('/fonts/Open_Sans/OpenSans-Regular.woff') format('woff'),
-    url('/fonts/Open_Sans/OpenSans-Regular.ttf') format('ttf'),
-    url('/fonts/Open_Sans/OpenSans-Regular.eot') format('eot');
+    url('/fonts/Open_Sans/open-sans.woff2') format('woff2'),
+    url('/fonts/Open_Sans/open-sans.woff') format('woff'),
+    url('/fonts/Open_Sans/open-sans.ttf') format('ttf'),
+    url('/fonts/Open_Sans/open-sans.eot') format('eot');
 }
 
 /*@font-face {
@@ -77,37 +77,25 @@ body {
 }
 .background-main1 {
   position: absolute;
-  z-index: 4;
-  width: 1007.67px;
-  height: 634.06px;
-  left: -682.96px;
-  top: 80px;
-  background: radial-gradient(
-      58.88% 126.25% at 51.53% 47.82%,
-      #5e12d9 0%,
-      rgba(193, 17, 255, 0) 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-  filter: blur(400px);
-  transform: rotate(42.7deg);
+    z-index: 4;
+    width: 975px;
+    height: 634.06px;
+    left: -35px;
+    top: 147px;
+    background: radial-gradient(58.88% 126.25% at 51.53% 47.82%, #5d21c0 0%, rgba(193, 17, 255, 0) 100%);
+    filter: blur(128px);
+    transform: rotate(42.7deg);
 }
 .background-main2 {
   position: absolute;
-  z-index: 5;
-  width: 635.31px;
-  height: 568.01px;
-  left: -100.56px;
-  top: 581px;
-
-  background: radial-gradient(
-      58.88% 126.25% at 51.53% 47.82%,
-      rgba(185, 43, 252, 0) 0%,
-      #ffe0fc 88.35%,
-      rgba(255, 31, 233, 0.22) 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-  filter: blur(200px);
-  transform: rotate(33.87deg);
+    z-index: 5;
+    width: 407px;
+    height: 568.01px;
+    left: 355.44px;
+    top: 581px;
+    background: radial-gradient(58.88% 126.25% at 51.53% 47.82%, #aa75a5 0%, rgba(193, 17, 255, 0) 100%);
+    transform: rotate(33.87deg);
+    filter: blur(146px);
 }
 .background-main3 {
   position: absolute;
@@ -124,9 +112,9 @@ body {
     /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   filter: blur(400px);
   transform: rotate(-20.01deg);
-
   z-index: 6;
 }
+
 .background-reviews {
   position: absolute;
   width: 449.03px;
