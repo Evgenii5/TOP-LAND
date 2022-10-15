@@ -82,3 +82,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+hr {
+  padding: 0;
+  margin: 0;
+}
