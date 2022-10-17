@@ -1071,6 +1071,36 @@ body {
   background-color: #f1f1f1;
 }
 
+.accordion {
+  margin-bottom: 50px;
+}
+
+.accordion__item {
+  margin: 10px 0;
+}
+
+.accordion__header {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: rgb(33, 154, 175);
+  color: #fff;
+}
+
+.accordion__body {
+  display: none;
+  padding: 20px 10px;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+/*класс active мы будум добавлять для элементов на которые нажал пользователь*/
+.accordion__body.active {
+  display: block;
+  overflow: initial;
+}
+
+
+
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------page-header------------------------------------*/
 .page-header {
