@@ -312,69 +312,25 @@
                   </div>
                   
                   <div class="accordion faq_accordion" id="faq_accordion">
-                    <div class="accordion__item accordion__item_show">
-                      <div class="accordion__header">
-                        Заголовок 1
+                    <div class="accordion__item close">
+                      <div class="accordion__item_header">
+                        Заголовок 1 <span>+</span>
                       </div>
-                      <div class="accordion__body">
+                      <div class="accordion__item_body">
                         Содержимое 1
                       </div>
                     </div>
 
-                    <div class="accordion__item accordion__item_show">
-                      <div class="accordion__header">
-                        Заголовок 2
+                    <div class="accordion__item close">
+                      <div class="accordion__item_header">
+                        Заголовок 2 <span>+</span>
                       </div>
-                      <div class="accordion__body">
+                      <div class="accordion__item_body">
                         Содержимое 2
                       </div>
                     </div>
                   </div>
-                  <script>
-                    /*находим все нужные нам headingElem*/
-                      let allElems = document.querySelectorAll('.accordion__header');
-                      /*прогоняем из через цикл*/
-                      allElems.forEach((elem) => {
-                        /*вещаем на каждый элемент обработчик на событие click*/
-                        elem.addEventListener('click', function () {
-                          /*у нажатого элемента получаем родителя*/
-                          let parentElem = this.parentNode;
-                          /*находим элемент с контентом*/
-                          let contentBlock = parentElem.querySelector('.accordion__body')
-                          /*аналогичная проверка на наличие класса active*/
-                          if (contentBlock.classList.contains('active')) {
-                            contentBlock.classList.remove('active');
-                          }
-                          else {
-                            contentBlock.classList.add('active');
-                          }
-                        })
-                      })
-                  </script>
                   
-
-                  <!--<div class="question__block">             
-
-                    <button class="collapsible"> Open Section1</button>
-                    <div class="content">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt odit vel, aliquam praesentium quasi delectus quibusdam nulla quisquam culpa facere provident omnis ut rerum sequi sint? Sit, similique eveniet?</p>
-                    </div>
-
-                    <button class="collapsible"> Open Section1</button>
-                    <div class="content">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt odit vel, aliquam praesentium quasi delectus quibusdam nulla quisquam culpa facere provident omnis ut rerum sequi sint? Sit, similique eveniet?</p>
-                    </div>
-
-                    <button class="collapsible"> Open Section1</button>
-                    <div class="content">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt odit vel, aliquam praesentium quasi delectus quibusdam nulla quisquam culpa facere provident omnis ut rerum sequi sint? Sit, similique eveniet?</p>
-                    </div>
-
-                    <button class="collapsible"> Open Section1</button>
-                    <div class="content">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nesciunt odit vel, aliquam praesentium quasi delectus quibusdam nulla quisquam culpa facere provident omnis ut rerum sequi sint? Sit, similique eveniet?</p>
-                    </div>
-                  </div>-->
 
                 </div>
               </div>

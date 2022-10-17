@@ -985,121 +985,63 @@ body {
   padding-top: 23px;
   padding-right: 39px;
 } */
-/* /* .collapsible {
-  background-color: transparent;
-  color: rgb(255, 255, 255, 0.5);
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #fff;
-  text-align: none;
-  outline: none;
-  font-size: 20px;
-} */
-/* .active,
-.collapsible:hover {
-  background-color: transparent;
-  color: rgb(255, 255, 255, 1);
-}  */
-/* .collapsible:after {
-  content: "\002B";
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-} */
-/* .active:after {
-  content: "\2212";
-  color: rgb(255, 255, 255, 1);
-} */
-/* .content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #ffffff;
-} */
-
-.collapsible:hover {
-  background-color: transparent;
-  color: rgb(255, 255, 255, 1);
-}
-.collapsible:after {
-  content: "\002B";
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-.active:after {
-  content: "\2212";
-  color: rgb(255, 255, 255, 1);
-}
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #ffffff;
-}
-*/
-/* Style the button that is used to open and close the collapsible content */
-.collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.collapsible:hover {
-  background-color: #ccc;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
-.accordion {
-  margin-bottom: 50px;
-}
 
 .accordion__item {
-  margin: 10px 0;
-}
-
-.accordion__header {
+  float: left;
   display: block;
   width: 100%;
+  box-sizing: border-box;
+  font-family: 'Open-sans', Arial, sans-serif;
+}
+
+.accordion__item_header {
+  cursor: pointer;
+  margin: 0px 0px 10px 0px;
   padding: 10px;
-  background: rgb(33, 154, 175);
+  font-size: 22px;
+  font-weight: 400;
+  background: #2980b9;
   color: #fff;
+  width: 100%;
+  border-radius: 3px;
+  box-sizing: border-box;
 }
 
-.accordion__body {
-  display: none;
-  padding: 20px 10px;
-  border-bottom: 1px solid #1e1e1e;
+.accordion__item_header span {
+  float: right;
+  font-size: 25px;
 }
 
-/*класс active мы будум добавлять для элементов на которые нажал пользователь*/
-.accordion__body.active {
+.close .accordion__item_body {
+  height: 0px;
+  transition: height 1s ease-out;
+  transform: scaleY(0);
+  float: left;
   display: block;
-  overflow: initial;
 }
 
+.open .accordion__item_body {
+  padding: 20px;
+  background-color: #f0f1f1;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+  display: block;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  box-sizing: border-box;
+}
 
+.open .accordion__item_header {
+  margin: 0px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: #073e63;
+  color: #cdd7d8;
+}
 
 /*---------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------page-header------------------------------------*/
