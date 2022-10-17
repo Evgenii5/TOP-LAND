@@ -53,7 +53,7 @@
                     'link_before'     => 'class="menu__link"',           
                     'theme_location'  => 'main_menu',
                     'add_li_class'    => 'menu__item'
-                )
+                );
                 wp_nav_menu($args);
             ?>
         <div class="header__logo">
@@ -81,90 +81,3 @@
       </header>
 
         <main class="page">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="sidebar-overlay" id="overlay">
-    <div class="sidebar" id="nav">
-        <span class="hide-nav">
-            <span></span>
-            <span></span>
-        </span>
-        <?php  wp_nav_menu([
-            'theme_location' => 'main',
-            'container' => false,
-            'menu_class' => 'nav',
-        ]); ?>
-    </div>
-</div>
-
-<div class="header" id="header">
-    <div class="container-fluid">
-        <div class="left">
-            <a href="/">
-                <div class="logo">
-                    <img src="/wp-content/themes/main/static/logo_new.png">
-                </div>
-            </a>
-            <div class="show-nav" id="show-nav">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="right">
-            <div class="slogan">Региональная общественная организация</div>
-            <div class="title"><span>Федерация гандбола Ростовской области</span></div>
-        </div>
-        <?php echo do_shortcode('[handball161rus_social]'); ?>
-        <a href="#" class="colorblinded" id="colorblinded">
-            <div class="icon"><img src="<?= get_template_directory_uri() ?>/static/icons/glasses.png"></div>
-            <div class="text">Версия для слабовидящих</div>
-        </a>
-        <div class="font-size" id="font-size">
-            <a href="#" style="font-size: 18px;">A</a>
-            <a href="#" style="font-size: 23px;">A</a>
-            <a href="#" style="font-size: 28px;">A</a>
-        </div>
-    </div>
-	<div class="container-fluid header-menu">
-		<?php wp_nav_menu([
-            'theme_location' => 'main',
-            'container' => false,
-            'menu_class' => 'nav',
-        ]); ?>
-	</div>
-</div>
-
-
-
-<div class="content">
-    <div class="container-fluid">
