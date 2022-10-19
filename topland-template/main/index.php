@@ -1,1 +1,3 @@
-<?php wp_redirect(home_url('news')); ?>
+<?php get_header(); ?>
+<h1>Главная</h1>
+<?php get_footer(); ?>

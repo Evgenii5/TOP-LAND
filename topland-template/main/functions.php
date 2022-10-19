@@ -3,6 +3,81 @@
 // Удаляем category из УРЛа категорий (лучше No Category Base (WPML))
 // add_filter('category_link', create_function('$a', 'return str_replace("category/", "", $a);'), 9999);
 
+//включаем поддержку кастомного лога из настроек
+add_theme_support( 'custom-logo' );
+
+/* Load Styles */
+function topland_load_styles()
+{
+  wp_enqueue_style('style-zero', get_template_directory_uri().'/static/css/style-zero.css');
+  wp_enqueue_style('style', get_template_directory_uri().'/static/css/style.css');
+  wp_enqueue_style('style-adaptive', get_template_directory_uri().'/static/css/style-adaptive.css');
+  //wp_enqueue_style('style', get_stylesheet_uri());
+}
+ 
+add_action('wp_enqueue_scripts', 'topland_load_styles');
+
+//загрузка SVG
+add_filter( 'upload_mimes', 'svg_upload_allow' );
+
+# Добавляет SVG в список разрешенных для загрузки файлов.
+function svg_upload_allow( $mimes ) {
+	$mimes['svg']  = 'image/svg+xml';
+
+	return $mimes;
+}
+
+add_filter( 'wp_check_filetype_and_ext', 'fix_svg_mime_type', 10, 5 );
+
+# Исправление MIME типа для SVG файлов.
+function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
+
+	// WP 5.1 +
+	if( version_compare( $GLOBALS['wp_version'], '5.1.0', '>=' ) ){
+		$dosvg = in_array( $real_mime, [ 'image/svg', 'image/svg+xml' ] );
+	}
+	else {
+		$dosvg = ( '.svg' === strtolower( substr( $filename, -4 ) ) );
+	}
+
+	// mime тип был обнулен, поправим его
+	// а также проверим право пользователя
+	if( $dosvg ){
+
+		// разрешим
+		if( current_user_can('manage_options') ){
+
+			$data['ext']  = 'svg';
+			$data['type'] = 'image/svg+xml';
+		}
+		// запретим
+		else {
+			$data['ext']  = false;
+			$data['type'] = false;
+		}
+
+	}
+
+	return $data;
+}
+
+add_filter( 'wp_prepare_attachment_for_js', 'show_svg_in_media_library' );
+
+# Формирует данные для отображения SVG как изображения в медиабиблиотеке.
+function show_svg_in_media_library( $response ) {
+
+	if ( $response['mime'] === 'image/svg+xml' ) {
+
+		// С выводом названия файла
+		$response['image'] = [
+			'src' => $response['url'],
+		];
+	}
+
+	return $response;
+}
+
+
 
 
 // Добавить поддержку миниатюр
@@ -24,6 +99,15 @@ function add_additional_class_on_li($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+//добавление класса к <a> в меню
+function add_menu_link_class( $atts, $item, $args ) {
+  if (property_exists($args, 'link_class')) {
+    $atts['class'] = $args->link_class;
+  }
+  return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
 
 // добавление класса к логотипу
 add_filter( 'get_custom_logo', 'change_logo_class' );

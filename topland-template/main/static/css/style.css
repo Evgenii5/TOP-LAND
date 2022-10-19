@@ -27,10 +27,10 @@
 @font-face {
   font-family: "Inter";
   /*font-weight: 500;*/
-  src: local("Inter"), url("/fonts/Inter/Inter-Medium.woff2") format("woff2"),
-    url("/fonts/Inter/Inter-Medium.woff") format("woff"),
-    url("/fonts/Inter/Inter-Medium.ttf") format("ttf"),
-    url("/fonts/Inter/Inter-Medium.eot") format("eot");
+  src: local("Inter"), url("../fonts/Inter/Inter-Medium.woff2") format("woff2"),
+    url("../fonts/Inter/Inter-Medium.woff") format("woff"),
+    url("../fonts/Inter/Inter-Medium.ttf") format("ttf"),
+    url("../fonts/Inter/Inter-Medium.eot") format("eot");
 }
 
 /*@font-face {
@@ -47,10 +47,10 @@
   font-family: "Open Sans";
   /*font-weight: 500;*/
   src: local("Open Sans"),
-    url("/fonts/Open_Sans/OpenSans-Regular.woff2") format("woff2"),
-    url("/fonts/Open_Sans/OpenSans-Regular.woff") format("woff"),
-    url("/fonts/Open_Sans/OpenSans-Regular.ttf") format("ttf"),
-    url("/fonts/Open_Sans/OpenSans-Regular.eot") format("eot");
+    url("../fonts/Open_Sans/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/Open_Sans/OpenSans-Regular.woff") format("woff"),
+    url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("ttf"),
+    url("../fonts/Open_Sans/OpenSans-Regular.eot") format("eot");
 }
 
 /*@font-face {

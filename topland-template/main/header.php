@@ -15,9 +15,9 @@
     }
 
     // style
-    wp_enqueue_style('style-zero.css', get_template_directory_uri()."/static/css/style-zero.css");
-    wp_enqueue_style('style.css', get_template_directory_uri()."/static/css/style.css");
-    wp_enqueue_style('style-adaptive.css', get_template_directory_uri()."/static/css/style-adaptive.css");
+    //wp_enqueue_style('style-zero.css', get_template_directory_uri()."/static/css/style-zero.css");
+    //wp_enqueue_style('style.css', get_template_directory_uri()."/static/css/style.css");
+    //wp_enqueue_style('style-adaptive.css', get_template_directory_uri()."/static/css/style-adaptive.css");
     
     // js
     wp_enqueue_script('script.js', get_template_directory_uri()."/static/js/script.js");
@@ -50,7 +50,7 @@
                     'container_class' => 'header__menu menu',           
                     'menu_class'      => 'menu__list',          
                     'fallback_cb'     => 'wp_page_menu',            
-                    'link_before'     => 'class="menu__link"',           
+                    'link_class'     => 'menu__link',           
                     'theme_location'  => 'main_menu',
                     'add_li_class'    => 'menu__item'
                 );
@@ -61,7 +61,7 @@
         </div>
 
           <div class="header__location">
-            <div class="header__location_img"><img src="img/location.svg" alt="location"/></div>
+            <div class="header__location_img"><img src="<?php echo get_template_directory_uri()?>/static/img/location.svg" alt="location"/></div>
             <div class="header__location_text">Ростов-на-Дону</div>
           </div>
 
