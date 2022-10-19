@@ -9,9 +9,9 @@
     
                                       <div class="main-subtitle">
                                         <div class="main-subtitle__item">Техническая поддержка</div>
-                                        <div class="main-subtitle__item"><img src="img/Soft Star.svg" alt="img"></div>
+                                        <div class="main-subtitle__item"><img src="<?php echo get_template_directory_uri()?>/static/img/Soft Star.svg" alt="img"></div>
                                         <div class="main-subtitle__item">Копирайт</div>
-                                        <div class="main-subtitle__item"><img src="img/Soft Star.svg" alt="img"></div>
+                                        <div class="main-subtitle__item"><img src="<?php echo get_template_directory_uri()?>/static/img/Soft Star.svg" alt="img"></div>
                                         <div class="main-subtitle__item">Контекстная реклама</div>
                                       </div>
     
@@ -25,11 +25,11 @@
                               <div class="main-image__text_title">+70%</div>
                               <div class="main-image__text_subtitle">Выводим сайты клиентов в топ-10</div>
                             </div>
-                            <div class="main-image__el el2"><img src="/img/img2.png" alt="img"></div>
+                            <div class="main-image__el el2"><img src="<?php echo get_template_directory_uri()?>/static/img/img2.png" alt="img"></div>
                           </div>
                           <div class="main-image__bottom">  
-                            <div class="main-image__el el3"><img src="/img/img3.png" alt="img"></div>
-                            <div class="main-image__el el4"><img src="/img/img4.png" alt="img"></div>
+                            <div class="main-image__el el3"><img src="<?php echo get_template_directory_uri()?>/static/img/img3.png" alt="img"></div>
+                            <div class="main-image__el el4"><img src="<?php echo get_template_directory_uri()?>/static/img/img4.png" alt="img"></div>
                           </div>
                         </div>
                     </div>
@@ -41,11 +41,11 @@
                                             <div class="main-3colums__text1">Повышаем продажи партнерских товаров и услуг в среднем в 3 раза</div>
                                           </div>
                                           <div class="main-3columns__item item2">
-                                            <div class="main-3columns__img"><img src="img/Lightning 2.svg" alt="img"></div>
+                                            <div class="main-3columns__img"><img src="<?php echo get_template_directory_uri()?>/static/img/Lightning 2.svg" alt="img"></div>
                                             <div class="main-3columns__text2">7 лет работаем<br>в интернет-маркетинге</div>
                                           </div>
                                           <div class="main-3columns__item item3">
-                                            <div class="main-3columns__img"><img src="img/Stairs 1.svg" alt="img"></div>
+                                            <div class="main-3columns__img"><img src="<?php echo get_template_directory_uri()?>/static/img/Stairs 1.svg" alt="img"></div>
                                           <div class="main-3columns__text3">Продвигаем сайты с технически<br>сложными тематиками</div>
                                           </div>
                                       </div>
@@ -63,27 +63,43 @@
                     <h2 class="_h2 services-block__title_h2"> Наши услуги</h2>
                   
                   <div class="services-block__columns">
-                    <div class="services-block__item serveces-item1">
-                      <div class="services-block__text">SEO продвижение</div>
-                      <div class="services-block__img"><img src="<?php echo get_template_directory_uri()?>/static/img/Frame 1.svg" alt="img"></div>
-                    </div>
-                    <div class="services-block__item serveces-item2">
-                      <div class="services-block__text">Создание сайтов</div>
-                      <div class="services-block__img"><img src="<?php echo get_template_directory_uri()?>/static/img/Frame 1.svg" alt="img"></div>
-                    </div>
-                    <div class="services-block__item serveces-item3">
-                      <div class="services-block__text">Контекстная реклама</div>
-                      <div class="services-block__img"><img src="<?php echo get_template_directory_uri()?>/static/img/Frame 1.svg" alt="img"></div>
-                    </div>
-                    <div class="services-block__item serveces-item4">
-                      <div class="services-block__text">Техническая поддержка</div>
-                      <div class="services-block__img"><img src="img/Frame 1.svg" alt="img"></div>
-                    </div>
-                    <div class="services-block__item serveces-item5">
-                      <div class="services-block__text">ГЕО-сервисы</div>
-                      <div class="services-block__img"><img src="img/Frame 1.svg" alt="img"></div>
-                    </div>
-                  </div>   
+                    <?php
+                      $categories = get_categories( [
+                        'taxonomy'     => 'category',                        
+                        'parent'       => '3',
+                        'orderby'      => 'name',
+                        'order'        => 'ASC',
+                        'hide_empty'   => 1,
+                        'hierarchical' => 1,
+                        'number'       => 0,
+                      ] );
+
+
+                    ?>
+
+                    <?php
+                      $args = array(              
+                            'taxonomy'      => 'category',            
+                            'orderby'       => 'name',
+                            'order'         => 'ASC',
+                            'hide_empty'    => true,
+                            'parent'        => '3',                        
+                            'update_term_meta_cache' => true, // подгружать метаданные в кэш
+                          );
+
+                          $term_query = new WP_Term_Query( $args );
+
+                          foreach( $term_query->get_terms() as $term ){                            
+                          ?>
+                           
+                          <a class="services-block__item" href="/<?php echo $term->taxonomy?>/<?php echo $term->slug?>">
+                            <div class="services-block__text"><?php echo $term->name?></div>
+                            <div class="services-block__img"><img src="<?php echo get_template_directory_uri()?>/static/img/Frame 1.svg" alt="img"></div>
+                          </a>
+                          <?php                          
+                          }
+                    ?> 
+                    </div>   
                 </div> 
 
               </div>
