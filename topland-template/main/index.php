@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 
             <section class="page__main-block main">
+              <div class="background-main1"></div>
+              <div class="background-main2"></div>
+              <div class="background-main3"></div>
               <div class="main-block__container _container">
                     <div class="main-block__body">
                         <div class="main-content">
@@ -59,7 +62,7 @@
               <div class="services-block__container _container">
                 <div class="services-block__body">
                   
-                    <div class="services-block__subtitle toplend">TOP LAND</div>
+                    <!--<div class="services-block__subtitle toplend">TOP LAND</div>-->
                     <h2 class="_h2 services-block__title_h2"> Наши услуги</h2>
                   
                   <div class="services-block__columns">
@@ -106,7 +109,8 @@
             </section> 
             
             <section class="page__choice-block choice">
-              <div class="choice-block__container _container">
+            <div class="background-choice"></div>  
+            <div class="choice-block__container _container">
                 <div class="choice-block__body">
                   <div class="choice-block__text">
                     <div class="choice-block__title"><h2 class="_h2 choice-block__title_h2">Почему выбирают<br>нашу компанию</h2></div>
@@ -159,7 +163,10 @@
             </section>
             
             <section class="page__reviews-block reviews">
-              <div class="reviews-block__container _container">
+              <div class="background-reviews">
+                <img class="triple-stars" src="img/triple_stars.svg" alt="stars">
+              </div>
+            <div class="reviews-block__container _container">
                 <div class="reviews_gradient_bg">
 
                 </div>
