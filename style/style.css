@@ -79,7 +79,7 @@ body {
   z-index: 4;
   width: 975px;
   height: 634.06px;
-  left: -35px;
+  left: -500px;
   top: 147px;
   background: radial-gradient(
     58.88% 126.25% at 51.53% 47.82%,
@@ -94,8 +94,8 @@ body {
   z-index: 5;
   width: 407px;
   height: 568.01px;
-  left: 355.44px;
-  top: 581px;
+  left: 255.44px;
+  top: 481px;
   background: radial-gradient(
     58.88% 126.25% at 51.53% 47.82%,
     #aa75a5 0%,
@@ -106,10 +106,10 @@ body {
 }
 .background-main3 {
   position: absolute;
-  width: 1266.02px;
+  width: 700.02px;
   height: 568.01px;
-  left: 701px;
-  top: 836.11px;
+  left: 536px;
+  top: 500.11px;
 
   background: radial-gradient(
       58.88% 126.25% at 51.53% 47.82%,
@@ -126,8 +126,8 @@ body {
   position: absolute;
   width: 449.03px;
   height: 367.72px;
-  /* left: 244px; */
-  top: 3480.7px;
+  left: 70px;
+  /* top: 3218.7px; */
 
   background: radial-gradient(
       50.09% 124.66% at 65.27% 55.89%,
@@ -139,24 +139,28 @@ body {
   filter: blur(100px);
   transform: rotate(-36.12deg);
 }
-.background-reviews__Star1 {
+.background-reviews__triple-stars {
   position: absolute;
-  z-index: 20;
+  z-index: 40;
 }
-.background-reviews__Star2 {
+
+.background-choice {
   position: absolute;
-  z-index: 20;
-}
-.background-reviews__Star3 {
-  position: absolute;
-  z-index: 20;
+  width: 571.09px;
+  height: 397.36px;
+  left: 955px;
+
+  background: radial-gradient(
+      51.61% 115.36% at 67.24% 51.72%,
+      rgba(73, 0, 107, 0.396) 0%,
+      rgba(255, 31, 233, 0.4) 57.07%,
+      rgba(222, 129, 255, 0.4) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  filter: blur(100px);
+  transform: rotate(-36.12deg);
 }
 .background-choice__left {
-  position: absolute;
-  width: 238.24px;
-  height: 429.21px;
-  left: 52.26px;
-  top: 3909.99px;
 }
 .background-choice__leftImg {
 }
@@ -201,6 +205,7 @@ body {
   min-height: 68px;
   align-items: center;
   justify-content: space-between;
+  background: #1a0930;
 }
 
 ._container {
@@ -313,6 +318,7 @@ body {
 .page {
 }
 .page__main-block {
+  position: relative;
 }
 .main {
 }
@@ -556,6 +562,9 @@ body {
 /*---------------------------------------------------------------------------------------------*/
 /*----------------------------------------services---------------------------------------------*/
 .page__services-block {
+  position: relative;
+  background: #1a0930;
+  z-index: 25;
 }
 .services {
 }
@@ -566,6 +575,7 @@ body {
 .services-block__body {
 }
 .services-block__title_h2 {
+  padding-top: 127px;
   margin-bottom: 53px;
 }
 .services-block__subtitle {
@@ -629,6 +639,7 @@ body {
 /*-----------------------------------------------------------------------------------------------*/
 /*----------------------------------------------page__choice-block--------------------------------*/
 .page__choice-block {
+  position: relative;
   margin-top: 158px;
 }
 .choice {
@@ -698,6 +709,8 @@ body {
   /*color: #f7f2ff;*/
 }
 .choice-block__img {
+  position: relative;
+  z-index: 30;
 }
 /*-------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------page__cases-block------------------------*/
@@ -729,6 +742,7 @@ body {
 /*---------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------page__reviews-block----------------------------*/
 .page__reviews-block {
+  position: relative;
 }
 .reviews {
 }
@@ -991,7 +1005,7 @@ body {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Open-sans', Arial, sans-serif;
+  font-family: "Open-sans", Arial, sans-serif;
 }
 
 .accordion__item_header {
